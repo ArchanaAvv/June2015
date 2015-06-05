@@ -1,0 +1,57 @@
+
+ <!-- what is jquery ,Three are three ways to add jquery in the page -->
+
+<!-- jquery is a javascript library
+ 1) It handles all cross browser issues
+ 2) chaining functions we write less and do more ....
+ 3) modifies dom
+ 4) ui interactions, like effects
+
+They are maintaining two versions of Jquery, what are those
+1) 1.x and 2.x
+
+
+  Jquery  if(internetexplorer){
+                //dothis
+   } if(firefox){
+   //do this
+  }
+
+  //conditional code
+  Jquery functions and properties
+
+  //there are three evil browsers
+  //internet explorer 6 , internet explorer 7, and internet explorer 8, internet explorer 9
+//conditional code
+
+  // modern chrome, firefox, ie 10, ie 11
+  //file size of jquery was increasing --
+
+  older browsers (ie6,ie7,ie8,ie9) -- jquery 1.x
+    ie10 and above, chrome , firefox -- jquery 2.x -- they removed all the conditional code
+  --reduces the file size and increases the performance of the application
+
+
+1.x-- compressed version and uncompressed
+
+I will always add it in the bottom of the page
+-->
+
+
+
+
+// jQuery('#headingTitle)
+    //how to access an dom element or an  html element  using jquery
+    ///dom traversing, searching
+    var headingTitleElement = $('#headingTitle');//create a jquery wrapper object
+    //if u want directly html --> document.getElementById('headingTitle)
+      //$('#headingTitle')[0]
+   //jquery selector, return a jquery object,
+
+
+<!-- cdn -- content delivery network -->
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.js"></script>
+
+<!-- bower ,nodejs -->
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>

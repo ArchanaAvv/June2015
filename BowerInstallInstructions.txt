@@ -1,0 +1,13 @@
+1)go to nodejs.org
+2) install the node
+In the command line run these commands
+3) node --version
+4) npm --version
+Bower will be installed
+5) npm install -g bower
+
+//#to Install Jquery
+//bower install jquery
+
+//--to create bower.json
+bower install
