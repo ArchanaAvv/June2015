@@ -1,0 +1,35 @@
+<script type="text/javascript">
+    function onTaskBtnClickHandler(){
+        alert('btn is clicked');
+        //event registration
+        //event happens call certain function
+
+        //click
+        //touch
+        //mouseMove
+        //mouseUp
+        //mouseDown//press
+        //custom events
+        //focusIn
+        //focusOut
+
+
+    }
+
+    function onDoubleClickHandler(){
+        alert('on double click ');
+    }
+</script>
+
+$('document').ready(function(){
+
+});
+
+    ////on user interactions we want to write some logic through jquery
+    //function onTaskButtonClickHandler(){
+    //    alert('jquery task button handler');
+    //}
+    ////UnObstrusive Javscript
+    //$('#taskBtn').click(onTaskButtonClickHandler);//event registration
+    ////event registration
+    ////event handler

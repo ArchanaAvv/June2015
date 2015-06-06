@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+          rel="stylesheet" >
+    <style>
+        .leftBorderRed{
+            border-left: 4px solid red;
+            height: 100px;
+        }
+
+        li{
+            cursor: pointer;
+        }
+
+        .taskDone{
+            text-decoration: line-through;
+        }
+    </style>
+
+</head>
+<body>
+
+ <div class="container well">
+ <!-- Obstrusive Javscript -->
+
+     <div class="row">
+         <div class="col-xs-6">
+             <input type="text" id="taskInput" />
+             <button  id="taskBtn" class="btn btn-primary">Add Task</button>
+         </div>
+
+         <div class="col-xs-6 leftBorderRed">
+               <ul id="taskContainer">
+                   <li>Read Git Videos</li>
+                   <li>Read Jquery Book Chapter 1 and 2</li>
+               </ul>
+         </div>
+     </div>
+
+
+
+ </div>
+
+
+ <script type="text/javascript" src="jquery-1.11.3.js"></script>
+ <script type="text/javascript" src="app.js"></script>
+
+
+
+</body>
+</html>
