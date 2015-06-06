@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript" src="jquery-1.11.3.js"></script>
+
+    <script type="text/javascript">
+
+
+       // console.log($('#headingTitle').length);//  0
+
+        function onDocumentReadyHandler(){
+            console.log($('#headingTitle').length);//  1
+        } // function declaration
+
+        $('document').ready(onDocumentReadyHandler); //event registration
+
+        $('document').ready(function(){
+            console.log($('#headingTitle').length);//  1
+        });//anonymys function
+
+        $(function(){
+            console.log($('#headingTitle').length);
+        }); //third way of writing document. ready
+
+       // onDocumentReadyHandler();
+
+//        sum(10,function(){
+//            return 20;
+//        })
+//
+//        function sum(a,b){
+//            //b
+//            return a + b();
+//        }
+
+
+    </script>
+</head>
+<body>
+
+
+<!-- document.ready makes sure that your jquery code is executed
+     after all the dom elements are loaded -->
+
+<h1 id="headingTitle" >Welcome Javascript Developers.</h1>
+
+<script type="text/javascript">
+    //console.log($('#headingTitle').length); //1
+    function onDocumentReadyHandler(){
+        console.log($('#headingTitle').length);//  1
+    }
+
+    $('document').ready(onDocumentReadyHandler); //event registration
+</script>
+</body>
+</html>

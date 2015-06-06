@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+ <h1 class="welcomeHeading heading">Welcome Javascript Developers</h1>
+
+<script type="text/javascript" src="jquery-1.11.3.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $('h1').addClass('headingOne');
+        $('h1').addClass('headingMain');
+        $('h1').addClass('headingTwo');
+
+//        if($('h1').hasClass('heading')){
+//            //ture
+//            $('h1').removeClass('heading');//
+//        }else{
+//            $('h1').addClass('heading');//
+//        }
+
+        $('h1').toggleClass('heading');
+
+
+
+
+
+
+//      var currentHeadingText = $('h1').html() ;//get the text from the element
+//        console.log(currentHeadingText);
+//        $('h1').html('Welcome to Jquery');//replace the text with the passed values
+    });
+</script>
+</body>
+</html>
