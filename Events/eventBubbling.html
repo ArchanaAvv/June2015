@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.js" ></script>
+
+</head>
+<body>
+
+<div id="header">
+    <div id="content">
+        <button id="submitBtn">Submit Button</button>
+
+
+    </div>
+</div>
+
+<button id="submitBtnTwo">Submit Button 2 </button>
+
+<button id="submitBtnThree">Submit Button 3</button>
+
+<a href="http://www.google.com" class="googleLink" >Go to Google</a>
+<script type="text/javascript">
+
+    //event bubbling
+
+    $(function (){
+
+        $('body').click(function(){
+            console.log('body click handler is called');
+        });
+
+        $('#header').click(function(){
+            console.log('header click handler is called');
+        });
+
+        $('#content').click(function(){
+            console.log('content click handler is called');
+        });
+
+        $('#submitBtn').click(function(event){
+            console.log('submit button handler is called');
+            event.stopPropagation();//stop event bubbling
+
+        });
+
+        $('#submitBtn').hide(3000);//
+
+        $('.googleLink').click(function(event){
+           console.log('it will call this function and go to google');
+            event.preventDefault();
+            event.stopPropagation();
+            //default behavior of browser
+            //return false;
+        });
+
+//        document.getElementById('submitBtn').addEventListener('click',function(){
+//
+//        },true);//Capturing
+    });
+</script>
+</body>
+</html>

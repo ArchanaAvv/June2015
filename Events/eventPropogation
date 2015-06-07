@@ -1,0 +1,10 @@
+--->
+two phases
+
+1) Event Capturing (it will not work for browsers < ie9)
+2) Event Bubbling is the event propogation phase where event happened on the element is first handled by the
+ element event handler, then it will propoagte to the parent, if parent has event handler the
+ parent event handler will be called,
+ then it will propogate to the parent's parent --up the dom or up to the document
+
+//
