@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<div id="header">
+    <div class="headerContent">
+        <button id="submitBtnOne">Submit 1</button>
+        <button id="submitBtnTwo">Submit 2</button>
+        <button id="submitBtnThree">Submit 3</button>
+        <button id="triggerBtn">Trigger</button>
+    </div>
+</div>
+
+<script type="text/javascript" src="../jquery-1.11.3.js"></script>
+<script type="text/javascript" >
+
+    //Capital Case
+    //CamelCase -->
+    function onSubmitBtnHandler(){
+        console.log('I am the submit btn handler');
+        //secondSubmitBtnHandler();
+    }
+
+    //bind
+
+
+    $('#submitBtnOne,#submitBtnTwo,#submitBtnThree').bind('click',onSubmitBtnHandler); //event registration, binding
+    //  $('#submitBtnTwo').bind('click',onSubmitBtnHandler); //event registration, binding
+
+    $('#triggerBtn').bind('click',function(){
+        $('#submitBtnOne,#submitBtnTwo,#submitBtnThree').trigger('click');//mock the user action
+    });
+    //programatically I want to do what user is doing
+</script>
+
+</body>
+</html>

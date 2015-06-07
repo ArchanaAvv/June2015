@@ -1,0 +1,16 @@
+1) Do a Slide Show using Jquery
+
+2) javascript -- create an array
+
+
+var images = ['Desert.jpg','Penguins.jpg','Tulips.jpg','Chrysanthemum.jpg']
+
+Exercise 1 --
+-->Next and Previous
+
+Hint
+--attr
+$('img').attr('src',
+
+--Repeated Slide show
+

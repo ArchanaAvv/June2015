@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<div id="header">
+    <div class="headerContent">
+        <button class="initial" id="submitBtnOne">Submit 1</button>
+        <button class="submitBtnTwo">Submit 2</button>
+        <button class="submitBtnTwo">Submit 3</button>
+    </div>
+</div>
+
+ <script type="text/javascript" src="../jquery-1.11.3.js"></script>
+<script type="text/javascript" >
+
+    //DOm -- Document Object Model -- html from javascript
+    //methods (API)
+    //dy default
+$(function (){
+
+
+
+    $('#submitBtnOne').bind('click',function(event){
+        //event properties by browsers, jquery adds some other properties
+        //normalize it
+        this.className += ' btnOneclicked'; //dom element
+      //  $(this).addClass('clicked');// jquery wrapper of dom element
+        console.log('I am the submit btn handler');
+    });
+
+    $('.submitBtnTwo').bind('click',function(event){
+        //event properties by browsers, jquery adds some other properties
+        //normalize it
+        $(this).addClass('btnTwoclicked');// jquery wrapper of dom element
+        console.log('I am the submit btn 2  handler');
+    });
+
+    //javascript way
+
+   //var submitBtn = document.getElementById('submitBtnOne');//dom element with dom methods
+    //submitBtn.className = "clicked";
+//    submitBtn.onclick = function(event){
+//        //event object
+//        console.log('submit btn in native javascript way');
+//        //UnObstrusive way
+//
+//    }
+
+//    $('.submitBtnTwo').bind('click',function(){
+//        console.log('logic for submit btn two');
+//    });
+//
+//    var submitBtnTwoElements = document.getElementsByClassName('submitBtnTwo');
+//    if(submitBtnTwoElements.length > 0) {
+//        for(var i = 0;i < submitBtnTwoElements.length; i++){
+//            submitBtnTwoElements[i].onclick = function () {
+//                console.log('logic for submit btn two using native javascript way ')
+//            }
+//        }
+//    } //native way is faster than jquery
+//    //performance
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+what is an event?
+
+click
+browser resize
+
+---------------------------------------------------------
+
+//event registration
+//register your event , the event is handled
+
+---------------------------------------------------------
+
+1)bind
+
+$('#submitBtn').bind('click',function(){
+
+
+});
+
+$('#submitBtn').click(function(){
+
+
+});
+
+--------------------------------------------------
+2)unbind
+
+
+
+--------------------------------------
+
+3) trigger
+
+4) event properties
