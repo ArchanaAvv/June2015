@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+<!--    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+          rel="stylesheet" > -->
+    <style>
+    .allImages{
+        max-width: 400px;
+        background-color: black;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;}
+    .allImages div{
+        background-color: white;
+        width: 100%;
+        display: inline-block;
+        display: none;
+    }
+    .allImages img{
+        width: 100%;
+        height: auto;
+
+        }
+    button {
+        position: absolute;
+    }
+    .next {
+        right: 5px;
+    }
+    .prev {
+        left: 5px;
+    }
+
+</style>
+</head>
+<body id="bodyClass">
+<button class="next">Next</button>
+<button class="prev">Previous</button>
+<div class="allImages">
+    <div style="display:inline-block;">
+<img src="im1.jpg" alt="Mountain Pic1">First Image
+    </div>
+<div>
+<img src="im2.jpg" alt="Mountain Pic2">
+    </div>
+<div>
+<img src="im3.jpg" alt="Mountain Pic3">
+    </div>
+<div>
+    <img src="im4.jpg" alt="Mountain Pic4">
+</div>
+<div>
+    <img src="im5.jpg" alt="Mountain Pic5">
+</div>
+<div>
+<img src="im6.jpg" alt="Mountain Pic6">
+    </div>
+    </div>
+
+<script type="text/javascript" src="jquery-1.11.3.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var currentImage=0;
+        var images=$('.allImages div');
+        var totalImages= images.length;
+        console.log(totalImages);
+        function rotateImage(){
+            var image= $('.allImages div').eq(currentImage);
+            images.hide();
+            image.css('display','inline-block');
+        }
+        var autoSlide= setInterval(function(){
+            currentImage += 1;
+            if(currentImage > totalImages-1){
+                currentImage=0;
+            }
+            rotateImage();
+
+        },3000);
+        $('.next').click(function() {
+            clearInterval(autoSlide);
+            currentImage += 1;
+            if (currentImage > totalImages - 1) {
+                currentImage = 0;
+            }
+            rotateImage();
+        });
+        $('.prev').click(function() {
+            clearInterval(autoSlide);
+            currentImage -= 1;
+            if (currentImage < 0) {
+                currentImage = totalImages - 1;
+            }
+            rotateImage();
+        });
+
+
+    });
+</script>
+
+</body>
+</html>
