@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+          rel="stylesheet" >
+    <style>
+        #slideImage{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+ <div class="container well">
+     <div class="row">
+        <img id="slideImage" src="images/Chrysanthemum.jpg"  />
+     </div>
+
+     <div class="row">
+             <div class="col-xs-3">
+               <button class="btn btn-primary" id="prevBtn">Previous</button>
+             </div>
+
+            <div class="col-xs-3 pull-right">
+               <button class="btn btn-primary" id="nextBtn">Next</button>
+            </div>
+     </div>
+
+ </div>
+
+ <script type="text/javascript" src="../../jquery-1.11.3.js"></script>
+
+ <script type="text/javascript">
+
+     $(function(){
+
+          var images = ['images/Chrysanthemum.jpg','images/Desert.jpg','images/Penguins.jpg','images/Tulips.jpg'];
+
+          var currentCounter = 0;
+
+          $('#nextBtn').click(function(){
+              nextImage();
+           });
+
+         function nextImage(){
+             if(currentCounter < (images.length - 1)){//boundary coundation
+                 currentCounter++;
+             }else{
+                 currentCounter = 0;
+             }
+             assignImage();
+         }
+         function prevImage(){
+             if(currentCounter > 0){//boundary coundation
+                 currentCounter--;
+             }else{
+                 currentCounter = (images.length - 1);
+             }
+             assignImage();
+         }
+
+         function assignImage(){
+             $('#slideImage').attr('src',images[currentCounter]);
+         }
+
+         $('#prevBtn').click(function(){
+               prevImage();
+             //$('#slideImage').attr('src');
+         });
+
+         setInterval(function(){
+             nextImage();
+         },2000);
+     });
+
+//     var images=['images/image1','images/image2','images/image3','images/image4.jpg'];
+//     for(var i=0;i<images.length;i++) {
+//         function attributeChange()
+//         {
+//             $('img').attr('src',images[i]);
+//         }
+//         $('#next').click(attributeChange);
+//     }
+
+
+ </script>
+
+</body>
+</html>
